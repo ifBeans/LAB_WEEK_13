@@ -1,0 +1,28 @@
+1. MVVM memungkinkan sebuah pemisahan antara UI dan logika bisnis, sehingga memudahkan penambahannya fitur baru. MVVM berguna dalam pembuatan aplikasi besar yang menggunakan banyak data dan tampilan.
+
+Yang merepresentasikan Model adalah:
+- Movie
+- MovieService
+- MovieDao
+- MovieDatabase
+
+Yang merepresentasikan View adalah:
+- Semua file yang berada pada folder "Layout"
+- MainActivity
+- DetailsActivity
+
+Yang merepresentasikan ViewModel adalah:
+- MovieViewModel
+
+2. Metode Data Binding memungkinkan untuk secara otomatis menghubungkan View langsung ke ViewModel, sehingga tidak perlu secara manual update UI dengan menggunakan "findViewByID()".
+
+3. Singleton Pattern sangat penting untuk deklarasi sebuah Database untuk memastikan hanya ada 1 instance dari sebuah Database.
+
+4. Repository Pattern memastikan bahwa data di Database lokal akan selalu up-to-date dengan data dari API. Dan juga memungkinkan user untuk mengakses aplikasi dan dapat melihat datanya tanpa harus terkoneksi dengan internet, karena datanya sudah di-cache.
+
+5. Ada beberapa cara:
+
+- Pull-to-refresh, user dapat secara manual refresh Database dengan cara swipe-down pada layarnya.
+- Tombol Refresh, sama seperti Pull-to-refresh, bedanya ini menggunakan sebuah tombol yang user perlu tekan.
+- App launch, jadi setiap kali aplikasi di-run, Database akan di-update terlebih dahulu.
+- Foreground Service, jadi secara periodik Database akan di-update secara otomatis.
